@@ -1,0 +1,131 @@
+AI PROMPT LOG
+Date: 2026-11-23 (Asia/Bangkok, UTC+07:00)
+=====================================================
+
+[1] 13:20
+ถ้าฉันต้องการเขียนภาษา java ต้องเริ่มยังไง
+
+-----------------------------------------------------
+
+[2] 13:22
+ถ้าต้องการให้มี class function เพิ่ม
+
+-----------------------------------------------------
+
+[3] 13:22
+เอา main กับ medthod ไว้ในไฟล์เดียวกันได้ไหม
+
+-----------------------------------------------------
+
+[4] 13:25
+ถ้าอยาก input ข้อมูลต้องทำยังไง
+
+-----------------------------------------------------
+
+[5] 13:51
+(แนบภาพ error)
+Error: Could not find or load main class sort
+Caused by: java.lang.ClassNotFoundException: sort
+
+import java.util.Scanner;
+
+public class main{
+    public static void sort(int [] n){
+        for(int i = 0 ; i < n.length - 1 ; i++ ){
+            boolean swaped = false;
+            for (int j = 0 ; j < n.length -1 - i ; j++ ){
+                if (n[j] > n[j+1]){
+                    int temp = n[j];
+                    n[j]=n[j+1];
+                    n[j+1] = temp;
+                    swaped = true;
+                }
+            }
+            if(!swaped){
+                break;
+            }
+        }
+    }
+    public static void printArray(int [] m){
+        for(int i = 0 ; i<m.length ; i++ ){
+            System.out.println(m[i]);
+        }
+    }
+    public static void run(){
+        Scanner sc = new Scanner(System.in);
+        int n ;
+        do {
+            System.out.print("Enter your total num : ");
+            n = sc.nextInt();
+            if(n<0){
+                System.out.println("error");
+            }
+        }while (n<0);
+        int num [] = new int[n];
+        for(int i =0 ; i < num.length ; i++){
+            System.out.print("enter your number " + i+1 + "=");
+            num[i] = sc.nextInt();
+        }
+        sort(num);
+        printArray(num);
+        sc.close();
+    }
+}
+
+-----------------------------------------------------
+
+[6] 13:53
+String[] args ไม่มีอันนี้ได้ไหม
+
+-----------------------------------------------------
+
+[7] 13:54
+import java.util.Scanner;
+
+public class Main{
+    public static void sort(int [] n){
+        for(int i = 0 ; i < n.length - 1 ; i++ ){
+            boolean swaped = false;
+            for (int j = 0 ; j < n.length -1 - i ; j++ ){
+                if (n[j] > n[j+1]){
+                    int temp = n[j];
+                    n[j]=n[j+1];
+                    n[j+1] = temp;
+                    swaped = true;
+                }
+            }
+            if(!swaped){
+                break;
+            }
+        }
+    }
+    public static void printArray(int [] m){
+        for(int i = 0 ; i<m.length ; i++ ){
+            System.out.println(m[i]);
+        }
+    }
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n ;
+        do {
+            System.out.print("Enter your total num : ");
+            n = sc.nextInt();
+            if(n<0){
+                System.out.println("error");
+            }
+        }while (n<0);
+        int num [] = new int[n];
+        for(int i =0 ; i < num.length ; i++){
+            System.out.print("enter your number " + i+1 + "=");
+            num[i] = sc.nextInt();
+        }
+        sort(num);
+        printArray(num);
+        sc.close();
+    }
+}
+
+-----------------------------------------------------
+
+[8] 13:58
+ช่วยบันทึก pomt ที่ฉันถามนายแล้วสร้างเป็นไฟล์ ai.log ที
